@@ -21,50 +21,57 @@ body {
   right: 0;
 }
 
-.app {
-  width: 280px;
-  max-height: 600px;
-  flex: 1;
-  box-shadow: 0 2px 15px #ccc;
-  margin: 10px;
-  align-items: stretch;
-}
-
-.title {
-  font-size: 20px;
-  align-items: center;
-  padding: 20px;
-}
-
-.items {
-  margin: 10px 0;
+h1 {
   text-align: center;
-  flex: 1;
-  overflow: auto;
+  margin-bottom: 100px;
 }
 
-.footer {
-  align-items: flex-start;
-  padding: 5px 10px;
-}
-
-.item {
+.tictac-row {
+  height: 100px;
+  width: 300px;
   display: flex;
-  padding: 10px 20px;
-  align-items: center;
   flex-direction: row;
 }
 
-.checkbox {
+.tictac-cell {
+  height: 100%;
+  width: 33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tictac-cell > img {
+  width: 50px;
+  height: 50px;
+}
+
+.tictac-row:not(:nth-of-type(3)) .tictac-cell {
+  border-bottom: 1px solid black;
+}
+
+.tictac-row > .tictac-cell:nth-of-type(2) {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.btn-section {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.btn {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.btn:first-of-type {
   margin-right: 20px;
 }
 
-input[type="checkbox"] {
-  margin-right: 10px;
-}
-
-input[type="text"] {
-  align-self: stretch;
-  padding: 3px 5px;
-  margin-top: 20px;
+.btn-active {
+  opacity: 0.3;
 }
