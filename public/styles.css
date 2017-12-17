@@ -1,0 +1,81 @@
+/* @embed base.css */
+/* reset */
+body, div {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+body {
+  font: 14px "Century Gothic", Futura, sans-serif;
+}
+
+#root {
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.tictac-row {
+  height: 100px;
+  width: 300px;
+  display: flex;
+  flex-direction: row;
+}
+
+.tictac-cell {
+  height: 100%;
+  width: 33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tictac-cell > img {
+  width: 50px;
+  height: 50px;
+}
+
+.tictac-row:not(:nth-of-type(3)) .tictac-cell {
+  border-bottom: 1px solid black;
+}
+
+.tictac-row > .tictac-cell:nth-of-type(2) {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.btn-section {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.btn-top-section {
+  text-align: center;
+}
+
+.btn {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.btn:first-of-type {
+  margin-right: 20px;
+}
+
+.btn-active {
+  opacity: 0.3;
+}
