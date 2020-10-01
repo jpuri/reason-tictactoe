@@ -1,3 +1,3 @@
 # reason-tictactoe
 
-A simple tictactoe game written using Reasonml.
+A simple and interactive tictactoe game written using Reasonml.
